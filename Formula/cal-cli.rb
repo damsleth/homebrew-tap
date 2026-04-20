@@ -3,8 +3,8 @@ class CalCli < Formula
 
   desc "Calendar CLI for Outlook / Microsoft 365"
   homepage "https://github.com/damsleth/cal-cli"
-  url "https://github.com/damsleth/cal-cli/archive/refs/tags/v0.1.0.tar.gz"
-  sha256 "68e776fd3090eacd1022ab5d2ea59a53ab763ab85bf1fac8b2b2a50ea6d98d64"
+  url "https://github.com/damsleth/cal-cli/archive/refs/tags/v0.1.1.tar.gz"
+  sha256 "7315d61e2d77608d899f0a02897c06666b74205248aa66a307ac68d5934b91e9"
   license "WTFPL"
   head "https://github.com/damsleth/cal-cli.git", branch: "main"
 

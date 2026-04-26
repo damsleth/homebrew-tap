@@ -2,11 +2,11 @@ class OwaCal < Formula
   include Language::Python::Virtualenv
 
   desc "Calendar CLI for Outlook / Microsoft 365"
-  homepage "https://github.com/damsleth/cal-cli"
-  url "https://github.com/damsleth/cal-cli/archive/refs/tags/v0.6.0.tar.gz"
-  sha256 "5fbff01a8f2267574cdcc6056a63668b437522ed036bbf2c639927c50f8e6dbe"
+  homepage "https://github.com/damsleth/owa-cal"
+  url "https://github.com/damsleth/owa-cal/archive/refs/tags/v0.6.1.tar.gz"
+  sha256 "6f9e84348fd4bcc855d2e6f16d53ee0a0df733d73aab42269e0218d52e478f85"
   license "MIT"
-  head "https://github.com/damsleth/cal-cli.git", branch: "main"
+  head "https://github.com/damsleth/owa-cal.git", branch: "main"
 
   depends_on "python@3.12"
   depends_on "damsleth/tap/owa-piggy" => :recommended

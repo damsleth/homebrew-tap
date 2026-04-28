@@ -3,8 +3,8 @@ class CognitiveLedger < Formula
 
   desc "File-based, hybrid markdown+embeddings memory system for AI agents"
   homepage "https://github.com/damsleth/cognitive-ledger"
-  url "https://github.com/damsleth/cognitive-ledger/archive/refs/tags/v0.2.1.tar.gz"
-  sha256 "1979470e9e2fed8bb94e60c2c6f5f81fe72d2ce4a845d3b7e0689b371797a1ab"
+  url "https://github.com/damsleth/cognitive-ledger/archive/refs/tags/v0.2.2.tar.gz"
+  sha256 "25319ac3ddd1feef45b970a1755900c69771bc6f83fea1010c5f39f51845dba6"
   license "MIT"
   head "https://github.com/damsleth/cognitive-ledger.git", branch: "main"
 
@@ -22,7 +22,7 @@ class CognitiveLedger < Formula
     bin.install_symlink libexec/"bin/ledger-obsidian"
 
     # Bundle non-Python assets users will reference post-install
-    pkgshare.install "skills", "templates", "schema.yaml", "config.sample.yaml", "AGENTS.md"
+    pkgshare.install "templates", "schema.yaml", "config.sample.yaml", "AGENTS.md"
     pkgshare.install "scripts/hooks" => "hooks"
 
     # Install loose scripts that aren't console_scripts (ledger, sheep, ledger_ab)
@@ -60,8 +60,8 @@ class CognitiveLedger < Formula
       To bootstrap a ledger against your notes tree:
         ledger init --ledger-notes-dir ~/Code/ledger-notes --source-notes-dir ~/Code/notes
 
-      To install the /notes skill for your agents:
-        bash #{opt_pkgshare}/skills/install-skill.sh
+      The /notes agent skill is maintained separately:
+        https://github.com/damsleth/SKILLS
 
       Optional environment overrides:
         LEDGER_ROOT, LEDGER_NOTES_DIR, LEDGER_SOURCE_NOTES_DIR

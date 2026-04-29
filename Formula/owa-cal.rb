@@ -3,8 +3,8 @@ class OwaCal < Formula
 
   desc "Calendar CLI for Outlook / Microsoft 365"
   homepage "https://github.com/damsleth/owa-cal"
-  url "https://github.com/damsleth/owa-cal/archive/refs/tags/v0.6.1.tar.gz"
-  sha256 "6f9e84348fd4bcc855d2e6f16d53ee0a0df733d73aab42269e0218d52e478f85"
+  url "https://github.com/damsleth/owa-cal/archive/refs/tags/v0.6.2.tar.gz"
+  sha256 "8b04381179c11b6fcf2ac413264614fea76d9145ac0ab09409800870f99bd350"
   license "MIT"
   head "https://github.com/damsleth/owa-cal.git", branch: "main"
 

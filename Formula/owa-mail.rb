@@ -3,8 +3,8 @@ class OwaMail < Formula
 
   desc "Mail CLI for Outlook / Microsoft 365"
   homepage "https://github.com/damsleth/owa-mail"
-  url "https://github.com/damsleth/owa-mail/archive/refs/tags/v0.1.0.tar.gz"
-  sha256 "fbfb6dbf0a34257c760d087efd9f8bd6a6d9c61051632c45273ea59231571ccf"
+  url "https://github.com/damsleth/owa-mail/archive/refs/tags/v0.1.1.tar.gz"
+  sha256 "0d1d60f70e2c3eb76b5095f1b392d8cada13272fc81733c41903bc1db7e91b39"
   license "MIT"
   head "https://github.com/damsleth/owa-mail.git", branch: "main"
 

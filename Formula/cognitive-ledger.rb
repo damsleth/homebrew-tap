@@ -19,32 +19,18 @@ class CognitiveLedger < Formula
     # it resolve the full runtime dependency tree from PyPI.
     system libexec/"bin/python", "-m", "ensurepip", "--upgrade"
     system libexec/"bin/python", "-m", "pip", "install", "--prefer-binary", buildpath
+
+    # Console scripts (declared in pyproject.toml [project.scripts])
+    bin.install_symlink libexec/"bin/ledger"
     bin.install_symlink libexec/"bin/ledger-obsidian"
 
     # Bundle non-Python assets users will reference post-install
     pkgshare.install "templates", "schema.yaml", "config.sample.yaml", "AGENTS.md"
     pkgshare.install "scripts/hooks" => "hooks"
 
-    # Install loose scripts that aren't console_scripts (ledger, sheep, ledger_ab)
-    # Wrap each so it runs with the venv's Python and resolves the ledger package.
-    libexec_scripts = libexec/"scripts"
-    libexec_scripts.install "scripts/ledger", "scripts/sheep", "scripts/ledger_ab"
-
+    # `sheep` is invoked as `python -m ledger.maintenance`; install a thin wrapper
+    # pointed at the venv's Python so it doesn't depend on $PATH order.
     venv_python = "#{libexec}/bin/python"
-
-    (bin/"ledger").write <<~SH
-      #!/bin/bash
-      exec "#{venv_python}" "#{libexec_scripts}/ledger" "$@"
-    SH
-    (bin/"ledger").chmod 0755
-
-    (bin/"ledger-ab").write <<~SH
-      #!/bin/bash
-      exec "#{venv_python}" "#{libexec_scripts}/ledger_ab" "$@"
-    SH
-    (bin/"ledger-ab").chmod 0755
-
-    # `sheep` already shells out to python -m ledger.maintenance; point it at the venv.
     (bin/"sheep").write <<~SH
       #!/bin/bash
       exec "#{venv_python}" -m ledger.maintenance "$@"

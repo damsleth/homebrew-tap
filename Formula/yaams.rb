@@ -4,11 +4,7 @@ class Yaams < Formula
   desc "Local-first, high-recall personal memory store for messages, mail, and notes"
   homepage "https://github.com/damsleth/yaams"
   url "https://github.com/damsleth/yaams/archive/refs/tags/v0.1.0.tar.gz"
-  # SHA below is the placeholder used while the repo was private at v0.1.0
-  # tag time. Once damsleth/yaams flips to public, regenerate with:
-  #   brew fetch --build-from-source damsleth/tap/yaams
-  # ...and replace this value with the SHA brew reports.
-  sha256 "0000000000000000000000000000000000000000000000000000000000000000"
+  sha256 "d66edef7c46e416a5886277aef07b7ff513a23ca6fc343426f836cb74737e607"
   license "MIT"
   head "https://github.com/damsleth/yaams.git", branch: "main"
 

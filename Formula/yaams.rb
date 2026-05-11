@@ -24,6 +24,11 @@ class Yaams < Formula
     # Console script declared in pyproject.toml [project.scripts]
     bin.install_symlink libexec/"bin/yaams"
 
+    # spaCy NER model. Bundled at install time so first ingest works offline-ish
+    # (no surprise download on the hot path). If this fails (no network during
+    # `brew install`), users can re-run `yaams setup` after install.
+    system libexec/"bin/python", "-m", "spacy", "download", "xx_ent_wiki_sm"
+
     # Bundle config templates and the launchd plist template so users can copy
     # them out of the install prefix instead of needing the repo.
     pkgshare.install "config.yaml.example", "AGENTS.md"
@@ -49,8 +54,10 @@ class Yaams < Formula
       The first ingest run downloads the embedding model (BAAI/bge-m3, ~2GB).
       YAAMS prompts before downloading; subsequent runs are fully offline.
 
-      The spaCy multilingual NER model is required and not bundled:
-        #{opt_libexec}/bin/python -m spacy download xx_ent_wiki_sm
+      The spaCy NER model is downloaded automatically during install.
+      To install additional models (e.g. nb_core_news_sm) or recover from a
+      failed install-time download, run:
+        yaams setup
 
       Nightly scheduling: see #{opt_pkgshare}/docs/scheduling.md and copy
       #{opt_pkgshare}/local.yaams.ingest.plist.example into

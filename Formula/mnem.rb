@@ -3,12 +3,10 @@ class Mnem < Formula
 
   desc "Meta-CLI and suite hub for the mnem memory suite"
   homepage "https://github.com/damsleth/mnem"
-  head "https://github.com/damsleth/mnem.git", branch: "main"
+  url "https://github.com/damsleth/mnem/archive/refs/tags/v0.3.0.tar.gz"
+  sha256 "8432c66efa7951f6766e548205a0902a29a7e23d81d75d1f9055838c212f6778"
   license "MIT"
-
-  # Phase 3a release pending; for now `brew install --HEAD` is the
-  # path. A tagged URL+sha256 will land alongside the 0.1.0 PyPI
-  # publish.
+  head "https://github.com/damsleth/mnem.git", branch: "main"
 
   depends_on "python@3.12"
 

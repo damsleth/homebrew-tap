@@ -3,9 +3,10 @@ class OwaTools < Formula
 
   desc "Outlook / Microsoft 365 CLI suite (cal, mail, graph, doctor, people, sched, drive)"
   homepage "https://github.com/damsleth/owa-tools"
-  url "https://github.com/damsleth/owa-tools/archive/refs/tags/v0.1.2.tar.gz"
-  sha256 "115abaef166c57dd5254653cd05ae00c78da99d3584ec22e1b3f71348721825e"
+  url "https://github.com/damsleth/owa-tools/archive/refs/tags/v0.1.3.tar.gz"
+  sha256 "7e52745b393f8e7245763d6a99f33b3d34cc4ca5c84447eaabffbf4b1a5400c3"
   license "MIT"
+  version "0.1.3"
   head "https://github.com/damsleth/owa-tools.git", branch: "main"
 
   depends_on "python@3.12"

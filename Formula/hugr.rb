@@ -9,8 +9,8 @@ class Hugr < Formula
   # hugr is published to a public repo or PyPI, swap this to a tarball +
   # sha256 like the owa-tools formula.
   url "git@github.com:damsleth/hugr.git",
-      tag:      "v0.4.1",
-      revision: "7c98f2509becee6afa3e922cbba6adb45ef20612"
+      tag:      "v0.4.2",
+      revision: "f6a9d8db83c6c8c197861031d5e8d88b603dffa0"
   license "MIT"
   head "git@github.com:damsleth/hugr.git", branch: "main"
 

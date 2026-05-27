@@ -1,7 +1,7 @@
 class OwaTools < Formula
   include Language::Python::Virtualenv
 
-  desc "Outlook / Microsoft 365 CLI suite (cal, mail, graph, doctor, people, sched, drive)"
+  desc "Outlook/Microsoft 365 CLIs (cal, mail, graph, doctor, people, sched, drive)"
   homepage "https://github.com/damsleth/owa-tools"
   url "https://github.com/damsleth/owa-tools/archive/refs/tags/v0.2.1.tar.gz"
   version "0.2.1"

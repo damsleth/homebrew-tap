@@ -3,16 +3,16 @@ class Yaams < Formula
 
   desc "Local-first, high-recall personal memory store for messages, mail, and notes"
   homepage "https://github.com/damsleth/yaams"
-  url "https://github.com/damsleth/yaams/archive/refs/tags/v0.1.2.tar.gz"
-  sha256 "1dff127179f2b8d83e75a8c2a637a3ca72d4b41099044a9695da2a5cbd83d89e"
+  url "https://github.com/damsleth/yaams/archive/refs/tags/v0.1.11.tar.gz"
+  sha256 "bc9209e2804d88bf667c22d785249f2d8f8b3d78fa8db3df6a6d45a37b99a4ad"
   license "MIT"
   head "https://github.com/damsleth/yaams.git", branch: "main"
 
+  depends_on macos: :big_sur
   depends_on "python@3.12"
   # spaCy and sentence-transformers pull in compiled wheels (numpy, scikit-learn,
   # blis, torch). Mac users get arm64 wheels from PyPI; nothing builds from source
   # under normal conditions.
-  depends_on macos: :big_sur
 
   def install
     # Isolated venv. pip resolves the runtime dependency tree from PyPI rather

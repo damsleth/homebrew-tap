@@ -3,8 +3,8 @@ class CognitiveLedger < Formula
 
   desc "File-based, hybrid markdown+embeddings memory system for AI agents"
   homepage "https://github.com/damsleth/cognitive-ledger"
-  url "https://github.com/damsleth/cognitive-ledger/archive/refs/tags/v0.2.5.tar.gz"
-  sha256 "8ad04f5127b5406b6a2d15b92ec26a3eab4e31befd75103c018b169fbe0e11e1"
+  url "https://github.com/damsleth/cognitive-ledger/archive/refs/tags/v0.3.1.tar.gz"
+  sha256 "0a3e8b89cc4cfc59db230f217062820705deecdf8bec46edef7e40264414cda0"
   license "MIT"
   head "https://github.com/damsleth/cognitive-ledger.git", branch: "main"
 

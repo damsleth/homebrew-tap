@@ -3,8 +3,8 @@ class CognitiveLedger < Formula
 
   desc "File-based, hybrid markdown+embeddings memory system for AI agents"
   homepage "https://github.com/damsleth/cognitive-ledger"
-  url "https://github.com/damsleth/cognitive-ledger/archive/refs/tags/v0.5.0.tar.gz"
-  sha256 "ac173f0db0d90bc1f6b266507f1904d1771ede3c65476f3bf5d8f217055b147f"
+  url "https://github.com/damsleth/cognitive-ledger/archive/refs/tags/v0.6.0.tar.gz"
+  sha256 "cb6d83d37292f81df9549584c40c0d1b8b74847313d6f0e2e49775eca8b9b0c0"
   license "MIT"
   head "https://github.com/damsleth/cognitive-ledger.git", branch: "main"
 
@@ -22,7 +22,6 @@ class CognitiveLedger < Formula
 
     # Console scripts (declared in pyproject.toml [project.scripts])
     bin.install_symlink libexec/"bin/ledger"
-    bin.install_symlink libexec/"bin/ledger-obsidian"
 
     # Bundle non-Python assets users will reference post-install
     pkgshare.install "templates", "schema.yaml", "config.sample.yaml", "AGENTS.md"
@@ -60,6 +59,6 @@ class CognitiveLedger < Formula
 
   test do
     assert_match "ledger", shell_output("#{bin}/ledger --help")
-    assert_match "usage", shell_output("#{bin}/ledger-obsidian --help").downcase
+    assert_match "0.6.0", shell_output("#{bin}/ledger --version")
   end
 end

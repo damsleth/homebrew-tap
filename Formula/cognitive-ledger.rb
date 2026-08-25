@@ -3,8 +3,8 @@ class CognitiveLedger < Formula
 
   desc "File-based, hybrid markdown+embeddings memory system for AI agents"
   homepage "https://github.com/damsleth/cognitive-ledger"
-  url "https://github.com/damsleth/cognitive-ledger/archive/refs/tags/v0.11.0.tar.gz"
-  sha256 "489ce46a35ef77ba0b280d9403630586f99da4f1f1a9501a5f7e56cea4daca23"
+  url "https://github.com/damsleth/cognitive-ledger/archive/refs/tags/v0.11.2.tar.gz"
+  sha256 "eabe735f22d51ff98816552b0122ce7de7897815b00951514730eb2d7c5bedb7"
   license "MIT"
   head "https://github.com/damsleth/cognitive-ledger.git", branch: "main"
 
@@ -59,6 +59,6 @@ class CognitiveLedger < Formula
 
   test do
     assert_match "ledger", shell_output("#{bin}/ledger --help")
-    assert_match "0.11.0", shell_output("#{bin}/ledger --version")
+    assert_match "0.11.2", shell_output("#{bin}/ledger --version")
   end
 end

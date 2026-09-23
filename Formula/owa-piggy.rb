@@ -3,8 +3,8 @@ class OwaPiggy < Formula
 
   desc "Get an Outlook/Graph access token without registering an Azure AD app"
   homepage "https://github.com/damsleth/owa-piggy"
-  url "https://github.com/damsleth/owa-piggy/archive/refs/tags/v1.1.1.tar.gz"
-  sha256 "364d1ffa3bdfa3765b958d673e676cd2c31f46ba64edb7a77e4ff9e8c79fc680"
+  url "https://github.com/damsleth/owa-piggy/archive/refs/tags/v1.2.0.tar.gz"
+  sha256 "d14865c40eb41fd87abb6cad13043023e72ab16a01baa5619c7fb4e6d48a339d"
   license "MIT"
   head "https://github.com/damsleth/owa-piggy.git", branch: "main"
 

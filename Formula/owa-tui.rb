@@ -4,18 +4,22 @@ class OwaTui < Formula
   desc "Textual TUI front-end for the owa-tools Microsoft 365 CLI suite"
   homepage "https://github.com/damsleth/owa-tui"
   url "https://github.com/damsleth/owa-tui/archive/refs/tags/v0.3.0.tar.gz"
-  sha256 "SHA_PENDING"
+  sha256 "cdbd66d29ee605f65e0ca66eb19324db28217d8c5f919254b2a067dd6803e70c"
   license "MIT"
   head "https://github.com/damsleth/owa-tui.git", branch: "main"
 
-  depends_on "python@3.12"
   depends_on "damsleth/tap/owa-piggy"
+  depends_on "python@3.12"
 
-  # owa-tui imports owa-tools in-process, so it rides in this venv as a
-  # resource rather than as a separate formula.
+  # owa-tui imports owa-tools (owa_core, owa_cal, owa_mail, ...) in-process,
+  # so owa-tools must live in this venv as a resource. The owa-tools formula
+  # has its own venv, which owa-tui's interpreter cannot import from.
+  # Resources install with --no-deps, so owa-tools' owa-piggy requirement is
+  # not pulled in here; owa_core.auth runs the owa-piggy binary from PATH,
+  # which the owa-piggy formula provides. Keep in step with owa-tools.rb.
   resource "owa-tools" do
-    url "https://github.com/damsleth/owa-tools/archive/refs/tags/v1.7.0.tar.gz"
-    sha256 "3596a5a34a5988f873164f49d981cdfff66c8eb652810266c40cbd78bd8783f1"
+    url "https://github.com/damsleth/owa-tools/archive/refs/tags/v1.9.0.tar.gz"
+    sha256 "3a8a0f2b6a160cc4ad5f37cca1e0aae20ab9301a386aaa6edef37d9693f6df44"
   end
 
   resource "markdown-it-py" do

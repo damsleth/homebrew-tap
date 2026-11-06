@@ -4,7 +4,7 @@ class Yaams < Formula
   desc "Local-first, high-recall personal memory store for messages, mail, and notes"
   homepage "https://github.com/damsleth/yaams"
   url "https://github.com/damsleth/yaams/archive/refs/tags/v0.1.11.tar.gz"
-  sha256 "e27dbe08caae9ad71351c3569e8ab8d31c12db405e53e3d53c840b75daef0c45"
+  sha256 "ab00ec1ef77f3fbda0bc70a724b5e8d6058995f1b1bb23291c4ffa66e0b5b948"
   license "MIT"
   head "https://github.com/damsleth/yaams.git", branch: "main"
 

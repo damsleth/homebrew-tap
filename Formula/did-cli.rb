@@ -4,7 +4,7 @@ class DidCli < Formula
   desc "Command-line interface for did (time tracking) via GraphQL"
   homepage "https://github.com/damsleth/did-cli"
   url "https://github.com/damsleth/did-cli/archive/refs/tags/v0.2.0.tar.gz"
-  sha256 "db1a3ddb47fdbe6efff5a9a27d61ee79929755b7fbe7a504ab9e95022c418bab"
+  sha256 "09841c995cdb60a10ab707d7b0ed53b39951d17b96f00acd8918a38e13fba3a1"
   license "WTFPL"
   head "https://github.com/damsleth/did-cli.git", branch: "main"
 

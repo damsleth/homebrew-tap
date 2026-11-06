@@ -4,7 +4,7 @@ class OwaTui < Formula
   desc "Textual TUI front-end for the owa-tools Microsoft 365 CLI suite"
   homepage "https://github.com/damsleth/owa-tui"
   url "https://github.com/damsleth/owa-tui/archive/refs/tags/v0.3.1.tar.gz"
-  sha256 "eff7f66c856f6ff1735c776eab88c8387f283ec3c0753693a24a9ea619d2a4db"
+  sha256 "5f1e8cfd9a6c1d7dc35e75d5fc964d174fb1e258d35f72f63b9a0f5c6e936828"
   license "MIT"
   head "https://github.com/damsleth/owa-tui.git", branch: "main"
 

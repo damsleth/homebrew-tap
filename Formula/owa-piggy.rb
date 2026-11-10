@@ -14,6 +14,17 @@ class OwaPiggy < Formula
     virtualenv_install_with_resources
   end
 
+  # Formulae can't depend on casks, so Edge Dev is a caveat, not depends_on.
+  def caveats
+    <<~EOS
+      owa-piggy signs in through a hidden Edge window and prefers Edge Dev,
+      so clicking stable Edge in the Dock never lands in that window:
+        brew install --cask microsoft-edge@dev
+      Existing profiles then need one visible sign-in each:
+        owa-piggy reseed --profile <alias> --visual
+    EOS
+  end
+
   test do
     assert_match "usage", shell_output("#{bin}/owa-piggy --help")
   end
